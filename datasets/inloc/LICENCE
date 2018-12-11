@@ -1,0 +1,35 @@
+InLoc dataset is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/
+It contains information from Wustl Indoor RGBD dataset, which is made available here under the Open Database License http://opendatacommons.org/licenses/odbl/1.0/. 
+If you use our data, please cite our paper: 
+
+@inproceedings{taira2018inloc, 
+  title={{InLoc}: Indoor Visual Localization with Dense Matching and View Synthesis}, 
+  author={Taira, Hajime and Okutomi, Masatoshi and Sattler, Torsten and Cimpoi, Mircea and Pollefeys, Marc and Sivic, Josef and Pajdla, Tomas and Torii, Akihiko}, 
+  booktitle={{CVPR}}, 
+  year={2018} 
+}
+
+and the paper presenting original Wustl Indoor RGBD dataset: 
+
+@inproceedings{wijmans17rgbd,
+  author = {Erik Wijmans and
+            Yasutaka Furukawa},
+  title = {Exploiting 2D Floorplan for Building-scale Panorama RGBD Alignment},
+  booktitle = {Computer Vision and Pattern Recognition, {CVPR}},
+  year = {2017},
+  url = {http://cvpr17.wijmans.xyz/CVPR2017-0111.pdf}
+}
+
+
+Wustl Indoor RGBD dataset is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/
+
+If you use their data, please cite their paper:
+
+@inproceedings{wijmans17rgbd,
+  author = {Erik Wijmans and
+            Yasutaka Furukawa},
+  title = {Exploiting 2D Floorplan for Building-scale Panorama RGBD Alignment},
+  booktitle = {Computer Vision and Pattern Recognition, {CVPR}},
+  year = {2017},
+  url = {http://cvpr17.wijmans.xyz/CVPR2017-0111.pdf}
+}
