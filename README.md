@@ -32,7 +32,7 @@ The trained models trained on PF-Pascal (`ncnet_pfpascal.pth.tar`) and IVD (`ncn
 
 The demo Jupyter notebook file `point_transfer_demo.py` illustrates how to evaluate the model and use it for keypoint transfer on the PF-Pascal dataset. For this, previously download the PF-Pascal dataset and trained model as indicated above.
 
-### Training
+## Training
 
 To train a model, run `train.py` with the desired model architecture and the path to the training dataset.
 
@@ -48,15 +48,13 @@ Eg. For InLoc:
 python main.py --ncons_kernel_sizes 3 3 --ncons_channels 16 1 --dataset_image_path datasets/ivd --dataset_csv_path datasets/ivd/image_pairs/ 
 ```
 
-### Evaluation on PF-Pascal
+## Evaluation
 
 Evaluation for PF-Pascal is implemented in the `eval_pf_pascal.py` file. You can run the evaluation in the following way: 
 
 ```bash
 python eval_pf_pascal.py --checkpoint trained_models/[checkpoint name]
 ```
-
-### Evaluation on InLoc
 
 Evaluation for PF-Pascal is implemented in the `eval_inloc.py` file. You can run the evaluation in the following way: 
 
