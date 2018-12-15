@@ -20,7 +20,7 @@ The code is implemented using Python 3 and PyTorch 0.3. All dependencies should 
 
 The PF-Pascal dataset can be downloaded and unzipped by browsing to the `datasets/pf-pascal/` folder and running `download.sh`.
 
-The IVD dataset (used for training for the InLoc benchmark) can be downloaded and unzipped by browsing to the `datasets/ivd/` folder and first running `make_dirs.sh` and then `download.sh`.
+The IVD dataset (used for training for the InLoc benchmark) can be downloaded by browsing to the `datasets/ivd/` folder and first running `make_dirs.sh` and then `download.sh`.
 
 The InLoc dataset (used for evaluation) an be downloaded by browsing to the `datasets/inloc/` folder and running `download.sh`. 
 
