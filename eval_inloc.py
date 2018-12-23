@@ -21,7 +21,7 @@ from lib.plot import plot_image
 
 import argparse
 
-print('NCNet evaluation script - PF Pascal dataset')
+print('NCNet evaluation script - InLoc dataset')
 
 use_cuda = torch.cuda.is_available()
 
@@ -31,12 +31,11 @@ parser.add_argument('--checkpoint', type=str, default='')
 parser.add_argument('--inloc_shortlist', type=str, default='datasets/inloc/densePE_top100_shortlist_cvpr18.mat')
 parser.add_argument('--k_size', type=int, default=2)
 parser.add_argument('--image_size', type=int, default=3200)
-parser.add_argument('--n_queries', type=int, default=100)
+parser.add_argument('--n_queries', type=int, default=356)
 parser.add_argument('--n_panos', type=int, default=10)
 parser.add_argument('--softmax', type=str_to_bool, default=True)
 parser.add_argument('--matching_both_directions', type=str_to_bool, default=True)
 parser.add_argument('--flip_matching_direction', type=str_to_bool, default=False)
-parser.add_argument('--mm_type', type=str, default='skip', help='skip/normal')
 parser.add_argument('--pano_path', type=str, default='datasets/inloc/pano/', help='path to InLoc panos - should contain CSE3,CSE4,CSE5,DUC1 and DUC2 folders')
 parser.add_argument('--query_path', type=str, default='datasets/inloc/query/iphone7/', help='path to InLoc queries')
 
@@ -55,11 +54,10 @@ print(args)
 model = ImMatchNet(use_cuda=use_cuda,
                    checkpoint=args.checkpoint,
                    half_precision=half_precision,
-                   relocalization_k_size=args.k_size,
-                   mm_type = args.mm_type)
+                   relocalization_k_size=args.k_size)
 
 # Generate output folder path
-output_folder = args.inloc_shortlist.split('/')[-1].split('.')[0]+'_SZ_NEW_'+str(image_size)+'_K_'+str(k_size)+'_CONFIG_'+model.model_config
+output_folder = args.inloc_shortlist.split('/')[-1].split('.')[0]+'_SZ_NEW_'+str(image_size)+'_K_'+str(k_size)
 if matching_both_directions:
     output_folder += '_BOTHDIRS'
 elif flip_matching_direction:
@@ -68,9 +66,9 @@ else:
     output_folder += '_BtoA'
 if args.softmax==True:
     output_folder += '_SOFTMAX'
-if args.checkpoint!='' and (model.model_config=='mm_nc_mm' or model.model_config=='mm_nc_hmm'):
+if args.checkpoint!='':
     checkpoint_name=args.checkpoint.split('/')[-1].split('.')[0]
-    output_folder += '_MODEL_'+checkpoint_name
+    output_folder += '_CHECKPOINT_'+checkpoint_name
 print('Output matches folder: '+output_folder)
 
 # Data preprocessing

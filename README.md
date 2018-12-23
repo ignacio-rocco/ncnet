@@ -63,6 +63,7 @@ python eval_inloc.py --checkpoint trained_models/[checkpoint name]
 ```
 
 This will generate a series of matches files in the `matches/` folder that then need to be fed to the InLoc evaluation Matlab code. 
+In order to run the Matlab evaluation, you first need to clone the [InLoc demo repo](https://github.com/HajimeTaira/InLoc_demo), and download and compile all the required depedencies. Then you can modify the `compute_densePE_NCNet.m` file provided in this repo to indicate the path of the InLoc demo repo, and the name of the experiment (the particular folder name inside `matches/`), and run it to perform the evaluation.
 
 
 ## BibTeX 
