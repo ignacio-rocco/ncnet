@@ -23,6 +23,8 @@ params.output.dir = ['outputs_' experiment '_' sorted_list_fn(1:end-4)];
 params.output.gv_nc4d.dir = fullfile(params.output.dir, 'gv_nc4d'); % dense matching results path
 params.output.gv_nc4d.matformat = '.gv_nc4d.mat'; % dense matching results 
 params.output.pnp_nc4d.matformat = '.pnp_nc4d_inlier.mat'; % PnP results 
+% redefine gt poses path
+params.gt.dir = fullfile(ncnet_path,'lib_matlab')
 
 Nq=length(sorted_list.ImgList);
 
