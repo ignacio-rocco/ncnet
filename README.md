@@ -39,13 +39,13 @@ To train a model, run `train.py` with the desired model architecture and the pat
 Eg. For PF-Pascal:
 
 ```bash
-python main.py --ncons_kernel_sizes 5 5 5 --ncons_channels 16 16 1 --dataset_image_path datasets/pf-pascal --dataset_csv_path datasets/pf-pascal/image_pairs/ 
+python train.py --ncons_kernel_sizes 5 5 5 --ncons_channels 16 16 1 --dataset_image_path datasets/pf-pascal --dataset_csv_path datasets/pf-pascal/image_pairs/ 
 ```
 
 Eg. For InLoc: 
 
 ```bash
-python main.py --ncons_kernel_sizes 3 3 --ncons_channels 16 1 --dataset_image_path datasets/ivd --dataset_csv_path datasets/ivd/image_pairs/ 
+python train.py --ncons_kernel_sizes 3 3 --ncons_channels 16 1 --dataset_image_path datasets/ivd --dataset_csv_path datasets/ivd/image_pairs/ 
 ```
 
 ## Evaluation
@@ -56,7 +56,7 @@ Evaluation for PF-Pascal is implemented in the `eval_pf_pascal.py` file. You can
 python eval_pf_pascal.py --checkpoint trained_models/[checkpoint name]
 ```
 
-Evaluation for PF-Pascal is implemented in the `eval_inloc.py` file. You can run the evaluation in the following way: 
+Evaluation for InLoc is implemented in the `eval_inloc.py` file. You can run the evaluation in the following way: 
 
 ```bash
 python eval_inloc.py --checkpoint trained_models/[checkpoint name]
