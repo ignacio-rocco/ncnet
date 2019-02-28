@@ -32,8 +32,8 @@ class ImagePairDataset(Dataset):
             self.train_data = self.train_data.iloc[0:dataset_size,:]
         self.img_A_names = self.train_data.iloc[:,0]
         self.img_B_names = self.train_data.iloc[:,1] 
-        self.set = self.train_data.iloc[:,2].as_matrix()
-        self.flip = self.train_data.iloc[:, 3].as_matrix().astype('int')
+        self.set = self.train_data.iloc[:,2].values
+        self.flip = self.train_data.iloc[:, 3].values.astype('int')
         self.dataset_image_path = dataset_image_path         
         self.transform = transform
         # no cuda as dataset is called from CPU threads in dataloader and produces confilct
